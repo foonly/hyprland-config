@@ -3,5 +3,4 @@ text-color=#FFFFFFFF
 border-color=#333333AA
 border-radius=6
 anchor=bottom-right
-default-timeout=30
-
+default-timeout=30000
