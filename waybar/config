@@ -5,24 +5,24 @@
     // "width": 1280, // Waybar width
     "spacing": 8, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "tray", "hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["idle_inhibitor", "tray", "hyprland/workspaces", "hyprland/window", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
+        "all-outputs": false,
         "warp-on-scroll": false,
         "format": "{name}: {icon}",
         "format-icons": {
-    //        "1": "",
-    //        "2": "",
-    //        "3": "",
-    //        "4": "",
-    //        "5": "",
             "urgent": "",
-            "focused": "",
+            "active": "",
             "default": ""
+       },
+       "window-rewrite": {
+          "firefox": "",
+          "alacritty": "",
+          "code": "󰨞",
        }
     },
     "keyboard-state": {
@@ -34,8 +34,14 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+    "hyprland/submap": {
+         "format": "✌️ {}",
+         "max-length": 8,
+         "tooltip": false
+    },
+    "hyprland/window": {
+	"format": "{title}",
+        "separate-outputs": true
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
