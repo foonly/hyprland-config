@@ -3,4 +3,8 @@ screenshot
 clock
 indicator
 
-effect-blur=8x4
+grace=5
+fade-in=2
+
+effect-blur=12x4
+effect-greyscale
