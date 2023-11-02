@@ -5,11 +5,11 @@
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.3);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    padding: 6px 6px 0 6px;
+    margin: 6px 6px 0 6px;
 }
 
 window#waybar.hidden {
@@ -38,7 +38,7 @@ button:hover {
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 #workspaces button.focused {
@@ -54,6 +54,7 @@ button:hover {
     background-color: #64727D;
 }
 
+#user,
 #window,
 #clock,
 #battery,
@@ -82,8 +83,6 @@ button:hover {
     margin: 0 4px;
 }
 
-
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
@@ -100,6 +99,14 @@ button:hover {
 
 #workspaces {
     background-color: rgba(34,14,14,0.5);
+}
+
+#user {
+	background-color: rgba(34,14,14,0.5);
+}
+
+#icon {
+	border-radius: 20px;
 }
 
 #clock {
