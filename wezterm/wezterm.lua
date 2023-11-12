@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- config.color_scheme = 'Dark Pastel'
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.8
 config.hide_tab_bar_if_only_one_tab = true
 config.enable_scroll_bar = true
 
@@ -21,8 +21,8 @@ config.window_background_gradient = {
   orientation = 'Vertical',
 
   colors = {
-    '#3e2222',
-    '#393939',
+    '#080808',
+    '#201616',
   },
 
   interpolation = 'Linear',
