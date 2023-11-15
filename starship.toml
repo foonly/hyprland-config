@@ -1,7 +1,7 @@
 format = """
  \
 [](#a3aed2)\
-[󰣇](bg:#a3aed2 fg:#090c0c)\
+$os\
 [](bg:#769ff0 fg:#a3aed2)\
 $git_branch\
 $git_status\
@@ -18,7 +18,15 @@ $php\
 [](fg:#212736 bg:#1d2230)\
 $time\
 [ ](fg:#1d2230)\
-\n$directory$character"""
+\n$sudo$directory$character"""
+
+[os]
+format = "[$symbol]($style)"
+style = "bg:#a3aed2 fg:#090c0c"
+disabled = false
+
+[os.symbols]
+Arch = "󰣇"
 
 [directory]
 style = ""
@@ -33,13 +41,18 @@ truncation_symbol = "…/"
 "Music" = " "
 "Pictures" = " "
 
+[sudo]
+symbol = "󱡄"
+format = "[$symbol]($style)"
+disabled = true
+
 [package]
-style = "bg:#394260"
-format = '[[ $symbol$version ](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#394260 fg:#769ff0"
+format = '[ $symbol$version ]($style)'
 
 [gradle]
-style = "bg:#394260"
-format = '[[ $symbol$version ](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#394260 fg:#769ff0"
+format = '[ $symbol$version ]($style)'
 
 [git_branch]
 symbol = " "
