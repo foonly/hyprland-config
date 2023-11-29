@@ -68,7 +68,6 @@ button:hover {
 #custom-media,
 #tray,
 #mode,
-#idle_inhibitor,
 #scratchpad,
 #workspaces,
 #mpd {
@@ -109,19 +108,16 @@ button:hover {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #ff6666;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        color: #ff0000;
     }
 }
 
@@ -205,10 +201,6 @@ label:focus {
     background-color: #eb4d4b;
 }
 
-#tray {
-    background-color: rgba(87,30,164,0.6);
-}
-
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
@@ -219,13 +211,12 @@ label:focus {
 }
 
 #idle_inhibitor {
-    padding: 0 16px;
-    background-color: #2d3436;
+	padding-right: 10px;
+    color: #666666;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    color: #f0f0f0;
 }
 
 #mpd {

@@ -6,9 +6,9 @@
     // "width": 1280, // Waybar width
     "spacing": 8, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "tray", "idle_inhibitor", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "cpu", "temperature", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "temperature", "battery"],
+    "modules-right": ["pulseaudio", "network", "tray", "idle_inhibitor", "battery"],
     // Modules configuration
     "user": {
             "format": "{user} {work_H}:{work_M}",
