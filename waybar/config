@@ -2,13 +2,15 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
-    "margin": 4,
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
     // "width": 1280, // Waybar width
-    "spacing": 8, // Gaps between modules (4px)
+    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "cpu", "temperature", "hyprland/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "tray", "idle_inhibitor", "battery"],
+    "modules-left": ["hyprland/workspaces", "tray", "gamemode", "idle_inhibitor", "disk", "cpu", "temperature", "battery"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["mpris", "backlight", "pulseaudio", "clock"],
     // Modules configuration
     "user": {
             "format": "{user} {work_H}:{work_M}",
@@ -87,7 +89,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 19,
         "spacing": 10
     },
     "clock": {
@@ -95,9 +97,11 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+    "disk": {
+    	"format": "{free} 󰗮"
+    },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": "{usage}% "
     },
     "memory": {
         "format": "{}% RAM"
@@ -112,12 +116,18 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
+	"backlight/slider": {
+    	"min": 0,
+    	"max": 100,
+    	"orientation": "horizontal",
+    	//"device": "intel_backlight"
+	},
     "battery": {
         "states": {
-            // "good": 95,
+            //"full": 98,
             "warning": 30,
             "critical": 15
         },
@@ -125,8 +135,8 @@
         "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% 󰚥",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        //"format-good": "{icon}", // An empty format will hide the module
+        //"format-full": "Full",
         "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"]
     },
     "network": {
@@ -140,12 +150,13 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {desc} {volume}% | {format_source}",
-        "format-bluetooth": "{icon}   {desc}  {volume}% | {format_source}",
-        "format-bluetooth-muted": "󰝟  {icon}  | {format_source}",
-        "format-muted": "󰝟  {desc} | {format_source}",
-        "format-source": "  {volume}%",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-bluetooth-muted": "󰝟 ",
+        "format-muted": "󰝟 ",
+        "format-source": " {volume}%",
         "format-source-muted": " ",
+        "tooltip-format": "{icon} {desc} | {format_source}",
         "format-icons": {
             "headphone": "󰋋 ",
             "hands-free": "󰋎 ",
@@ -157,8 +168,11 @@
         },
         "on-click": "pavucontrol"
     },
+    "pulseaudio/slider": {
+        "on-click": "pavucontrol"
+    },
     "wireplumber": {
-	"format": "{volume}%",
+		"format": "{volume}%",
         "format-muted": "",
         "on-click": "pavucontrol",
 		"on-click-right": "helvum"
