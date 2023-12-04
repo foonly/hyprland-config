@@ -127,16 +127,17 @@
 	},
     "battery": {
         "states": {
-            //"full": 98,
+            "good": 80,
             "warning": 30,
             "critical": 15
         },
+        "full-at": 97,
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% 󰚥",
         "format-alt": "{time} {icon}",
         //"format-good": "{icon}", // An empty format will hide the module
-        //"format-full": "Full",
+        "format-full": "{icon}",
         "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"]
     },
     "network": {
