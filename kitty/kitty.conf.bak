@@ -2,6 +2,8 @@ font_family      	Comic Code Ligatures Regular
 bold_font        	Comic Code Ligatures Bold
 italic_font      	Comic Code Ligatures Italic
 bold_italic_font 	Comic Code Ligatures Bold Italic
+
+background		#333333
 background_opacity	0.7
 dynamic_background_opacity	true
 
@@ -11,9 +13,3 @@ strip_trailing_spaces smart
 
 tab_bar_edge top
 tab_bar_style powerline
-
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include current-theme.conf
-# END_KITTY_THEME

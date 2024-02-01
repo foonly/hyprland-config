@@ -1,0 +1,26 @@
+[font]
+size = 11.0
+
+[font.bold]
+family = "Monaspace Neon"
+style = "Bold"
+
+[font.bold_italic]
+family = "Monaspace Neon"
+style = "Bold Italic"
+
+[font.italic]
+family = "Monaspace Neon"
+style = "Italic"
+
+[font.normal]
+family = "Monaspace Neon"
+style = "Regular"
+
+[[mouse.bindings]]
+action = "Copy"
+mouse = "Right"
+
+[window]
+dynamic_title = true
+opacity = 0.6
