@@ -1,9 +1,2 @@
+image=/home/niklas/.local/share/wallpapers/end_4.png
 ignore-empty-password
-screenshot
-clock
-indicator
-
-grace=5
-fade-in=2
-
-effect-pixelate=24

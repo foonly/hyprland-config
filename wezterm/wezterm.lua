@@ -42,7 +42,8 @@ config.inactive_pane_hsb = {
   brightness = 0.8,
 }
 
-config.font = wezterm.font 'Monaspace Neon'
+config.font = wezterm.font 'Comic Code Ligatures'
+config.font_size = 14
 
 -- and finally, return the configuration to wezterm
 return config
